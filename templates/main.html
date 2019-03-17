@@ -5,16 +5,17 @@
     <title>Главная</title>
 </head>
 <body bgcolor="#9999ff">
-<h2>Сообщение</h2>
+<h2 style="color: black; font-size: 60px; font-family: Arial">Сообщение</h2>
 <form method="post" action="/add_message">
     <input type="text" name="text">
     <input type="text" name="tag">
+    <input type="text" name="username">
     <button type="submit">Добавить сообщение</button>
 </form>
 
 <h3>Список сообщений</h3>
 {% for message in messages %}
-<div>{{ message.text }}&nbsp;<b>#{{ message.tag }}</b></div>
+<div>{{ message.text }}&nbsp;<b>#{{ message.tag }} </b><b>@{{ message.username }}</b></div>
 {% endfor %}
 
 </body>
