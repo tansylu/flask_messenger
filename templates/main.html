@@ -7,15 +7,15 @@
 <body bgcolor="#9999ff">
 <h2 style="color: black; font-size: 60px; font-family: Arial">Сообщение</h2>
 <form method="post" action="/add_message">
-    <input type="text" name="text">
-    <input type="text" name="tag">
-    <input type="text" name="username">
+    <input type="text" value="имя пользователя" name="username"><br><br>
+    <input type="text" value="тэг" name="tag">
+    <input type="text" value="текст сообщения" name="text"><br><br>
     <button type="submit">Добавить сообщение</button>
 </form>
 
 <h3 style="color: black; font-size: 30px; font-family: Arial">Список сообщений</h3>
 {% for message in messages %}
-<div>{{ message.text }}&nbsp;<b>#{{ message.tag }} </b><b>@{{ message.username }}</b></div>
+<div>@{{ message.username }}&nbsp;<b>{{ message.text }} </b><b>#{{ message.tag }}</b></div>
 {% endfor %}
 
 </body>
