@@ -13,7 +13,7 @@
     <button type="submit">Добавить сообщение</button>
 </form>
 
-<h3 style="color: black; font-size: 40px; font-family: Arial">Список сообщений</h3>
+<h3 style="color: black; font-size: 30px; font-family: Arial">Список сообщений</h3>
 {% for message in messages %}
 <div>{{ message.text }}&nbsp;<b>#{{ message.tag }} </b><b>@{{ message.username }}</b></div>
 {% endfor %}
