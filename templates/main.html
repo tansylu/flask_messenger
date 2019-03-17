@@ -8,14 +8,14 @@
 <h2 align="center" style="color: black; font-size: 60px; font-family: century gothic">Чат</h2>
 <form method="post" action="/add_message">
     <input type="text" value=" имя пользователя" style="color: grey; font-size: 20px; font-family: century gothic" name="username"><br><br>
-    <input type="text" value=" tag" style="color: grey; font-size: 20px; font-family: century gothic" name="tag">
+    <input type="text" value=" tag" style="color: grey; font-size: 20px; font-family: century gothic" name="tag"><br><br>
     <input type="text" value=" текст сообщения" style="color: grey; font-size: 20px; font-family: century gothic" name="text"><br><br><br>
-    <button type="submit" style="color: grey; font-size: 20px; font-family: century gothic">Добавить сообщение</button>
+    <button type="submit" style="color: black; font-size: 20px; font-family: century gothic">Добавить сообщение</button>
 </form>
 
 <h3 style="color: black; font-size: 30px; font-family: century gothic">Список сообщений</h3>
 {% for message in messages %}
-<div>@{{ message.username }} <b>{{ message.text }} </b><b>#{{ message.tag }}</b></div>
+<div style="color: black; font-size: 20px; font-family: century gothic">@{{ message.username }}&nbsp;<b>{{ message.text }} </b><b>#{{ message.tag }}</b></div>
 {% endfor %}
 
 </body>
