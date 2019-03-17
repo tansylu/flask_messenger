@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<link rel = "stylesheet" href = "styles.css">
     <meta charset="UTF-8">
     <title>Главная</title>
 </head>
-<body>
-<h2>Сообщение</h2>
+<body bgcolor="#9999ff">
+<h2 style="color: black; font-size: 60px; font-family: century gothic">Сообщение</h2>
 <form method="post" action="/add_message">
     <input type="text" value="имя пользователя" name="username"><br><br>
     <input type="text" value="тэг" name="tag">
     <input type="text" value="текст сообщения" name="text"><br><br>
-    <button type="submit" >Добавить сообщение</button>
+    <button type="submit">Добавить сообщение</button>
 </form>
 
-<h3>Список сообщений</h3>
+<h3 style="color: black; font-size: 30px; font-family:century gothic">Список сообщений</h3>
 {% for message in messages %}
 <div>@{{ message.username }}&nbsp;<b>{{ message.text }} </b><b>#{{ message.tag }}</b></div>
 {% endfor %}
